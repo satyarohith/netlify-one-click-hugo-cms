@@ -1,3 +1,6 @@
+[[plugins]]
+package = "netlify-plugin-nimbella"
+
 [build.environment]
   YARN_VERSION = "1.12.1"
   NPM_VERSION = "6.4.1"
@@ -5,7 +8,9 @@
 [build]
   command = "yarn build"
   publish = "dist"
-  functions = "functions"
-  
+
 [context.deploy-preview]
   command = "yarn build:preview"
+
+[nimbella]
+functions = 'functions' 
